@@ -8,7 +8,7 @@ RUN if [ -f "/tmp/conda-tmp/environment.yml" ]; then umask 0002 && /opt/conda/bi
 
 RUN conda install -y python=3.11.5 pip \
     && pip install --no-cache-dir \
-       ultralytics==8.2.0 \
+       ultralytics==8.4.81 \
        torch==2.2.0 \
        torchvision==0.17.0 \
        numpy==1.26.4 \
@@ -18,7 +18,6 @@ RUN conda install -y python=3.11.5 pip \
        seaborn
 
 RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
-
 
 # [Optional] Uncomment to install a different version of Python than the default
 # RUN conda install -y python=3.6 \
